@@ -1,0 +1,20 @@
+#include <opencv2\opencv.hpp>
+#include <iostream>
+#include <string>
+using namespace cv;
+using namespace std;
+int main()
+{
+	char m[20];
+	cout << "请输入图片路径：" << endl;
+	cin.getline(m,20);
+	Mat img = imread(m);
+	if (img.empty())
+	{
+		cout << "error";
+		return -1;
+	}
+	imshow("实验1", img);
+	waitKey();
+	return 0;
+}
